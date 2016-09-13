@@ -10,13 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.pdp.demo.estimate.dao.EstimateDao;
-import com.pdp.demo.estimate.model.Estimate;
+
 //@Component
 public class DummyData // implements InitializingBean
 {
 
 	@Autowired
-	private EstimateDao dao;
+	private EstimateDao dao;s
 	
 	private static final String CHAR_LIST =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private static final int RANDOM_STRING_LENGTH = 10;
@@ -68,6 +68,7 @@ public class DummyData // implements InitializingBean
 		estimate.setPart_charge((int)(Math.random()*9000)+1000);
 		estimate.setTotal(getRandomNumber());
 		estimate.setService_tax((int)(Math.random()*9000)+1000);
+		System.out.println("hello");
 		
 		dao.saveUser(estimate);
 		
