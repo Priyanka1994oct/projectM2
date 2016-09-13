@@ -10,14 +10,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.pdp.demo.estimate.dao.EstimateDao;
+import com.pdp.demo.estimate.model.Estimate;
+
 
 //@Component
 public class DummyData // implements InitializingBean
 {
 
 	@Autowired
-	private EstimateDao dao;s
-	
+	private EstimateDao dao;	
 	private static final String CHAR_LIST =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private static final int RANDOM_STRING_LENGTH = 10;
 	GregorianCalendar gc = new GregorianCalendar();
