@@ -346,7 +346,7 @@ function Filter($filter) {
 							<tr>
 								<td><label style="font-size: 15px; margin-right: 5px">Year</label></td>
 								<td style="margin-left: 2px">
-									<select ng-model="year" class="form-control" id="sel1" ng-change="onYearChange()">
+									<select ng-model="year" class="form-control" id="sel1" data-ng-change="onYearChange()">
 										<%for (int i = year - 5; i < year + 5; i++) {%>
 										<option><%=i%></option>
 										<%}%>
@@ -356,19 +356,19 @@ function Filter($filter) {
 									<div>
 										
 										
-				<ul class="nav nav-pills horizon">
-			        <li  id="horizmonth0"   ng-click="getReportByMonthly(0)"><a href="#">Jan</a></li>
-			        <li  id="horizmonth1"   ng-click="getReportByMonthly(1)"><a href="#">Feb</a></li>
-			        <li  id="horizmonth2"   ng-click="getReportByMonthly(2)"><a href="#">Mar</a></li>
-			        <li  id="horizmonth3"   ng-click="getReportByMonthly(3)"><a href="#">Apr</a></li>
-			        <li  id="horizmonth4"   ng-click="getReportByMonthly(4)"><a href="#">May</a></li>
-			        <li  id="horizmonth5"   ng-click="getReportByMonthly(5)"><a href="#">Jun</a></li>
-			        <li  id="horizmonth6"   ng-click="getReportByMonthly(6)"><a href="#">Jul</a></li>
-			        <li  id="horizmonth7"   ng-click="getReportByMonthly(7)"><a href="#">Aug</a></li>
-			        <li  id="horizmonth8"   ng-click="getReportByMonthly(8)"><a href="#">Sep</a></li>
-			        <li  id="horizmonth9"   ng-click="getReportByMonthly(9)"><a href="#">Oct</a></li>
-			        <li  id="horizmonth10"  ng-click="getReportByMonthly(10)"><a href="#">Nov</a></li>
-			        <li  id="horizmonth11"  ng-click="getReportByMonthly(11)"><a href="#">Dec</a></li>
+				<ul class="nav nav-pills horizon ">
+			        <li  id="horizmonth0"   data-ng-click="getReportByMonthly(0)"><a href="#">Jan</a></li>
+			        <li  id="horizmonth1"   data-ng-click="getReportByMonthly(1)"><a href="#">Feb</a></li>
+			        <li  id="horizmonth2"   data-ng-click="getReportByMonthly(2)"><a href="#">Mar</a></li>
+			        <li  id="horizmonth3"   data-ng-click="getReportByMonthly(3)"><a href="#">Apr</a></li>
+			        <li  id="horizmonth4"   data-ng-click="getReportByMonthly(4)"><a href="#">May</a></li>
+			        <li  id="horizmonth5"   data-ng-click="getReportByMonthly(5)"><a href="#">Jun</a></li>
+			        <li  id="horizmonth6"   data-ng-click="getReportByMonthly(6)"><a href="#">Jul</a></li>
+			        <li  id="horizmonth7"   data-ng-click="getReportByMonthly(7)"><a href="#">Aug</a></li>
+			        <li  id="horizmonth8"   data-ng-click="getReportByMonthly(8)"><a href="#">Sep</a></li>
+			        <li  id="horizmonth9"   data-ng-click="getReportByMonthly(9)"><a href="#">Oct</a></li>
+			        <li  id="horizmonth10"  data-ng-click="getReportByMonthly(10)"><a href="#">Nov</a></li>
+			        <li  id="horizmonth11"  data-ng-click="getReportByMonthly(11)"><a href="#">Dec</a></li>
 			    </ul>
 										
 						</div>
@@ -410,7 +410,7 @@ function Filter($filter) {
 			<img src="<%=path%>/resources/image/spinner.gif" style="margin-top:-16px;position:absolute;">
 	  	</div>
 <div id ="tableContent">
-	 <table  class="table table-striped table-bordered" ng-if ="estimateList.length>0">
+	 <table  class="table table-striped table-bordered" ng-if ="estimateList.length>0" >
     <thead >
       <tr>
 		       <th ng-click="sortBy('estimate_dateStr')" ><span style="font-size: 15px; text-align: right; width: 5px;!important;">Date</span></th>
@@ -435,7 +435,7 @@ function Filter($filter) {
         	 <td><span style="text-align: right">{{estimate.discount | number :'2'}}</span></td>
         	 <td><span style="text-align: right">{{estimate.total | number :'2'}}</span></td>
       </tr>
-  <tr>
+  <tr >
   		<td colspan="3">Total</td>
   		 <td>{{totalLaborSum}}</td>
         <td>{{totalPartSum}}</td>
@@ -445,7 +445,7 @@ function Filter($filter) {
         
   </tr>
   
-  	<tr id="paginationRow" ng-if="estimateList!=null">
+  	<tr id="paginationRow" ng-if="estimateList!=null"  >
   	
 	 <td colspan="15">
 	 <span><input type ="text" ng-model="size" class="form-group" value="{{size}}"></span>
