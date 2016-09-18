@@ -16,4 +16,10 @@ public class IndexController {
 		return "welcome";
 	}
 	
+	
+		@RequestMapping("/")
+	public String estimate2(){
+		return "welcom3";
+	}
+	
 }
