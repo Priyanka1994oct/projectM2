@@ -17,9 +17,6 @@ public class IndexController {
 	}
 	
 	
-		@RequestMapping("/")
-	public String estimate2(){
-		return "welcom3";
-	}
+	
 	
 }
