@@ -11,11 +11,13 @@ public class IndexController {
 		return "welcome";
 	}
 	
-	@RequestMapping("/")
+	/*@RequestMapping("/")
 	public String estimate2(){
 		return "welcome";
 	}
+	*/
 	
+	// xyz
 	
 	
 	
